@@ -7,7 +7,7 @@ import { v4 as uuidv4 } from 'uuid';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  name = 'Angular ' + VERSION.major;
+  
   cookieValue = '';
   constructor(public cookieService: CookieService) {
     this.cookieService.set('X-Auth-Token', uuidv4());
