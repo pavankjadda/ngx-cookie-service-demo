@@ -3,6 +3,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { v4 as uuidv4 } from 'uuid';
 @Component({
   selector: 'my-app',
+  standalone: true,
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
