@@ -2,6 +2,14 @@
   "name": "angular",
   "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
+  },
   "dependencies": {
     "@angular/animations": "^16.0.0",
     "@angular/common": "^16.0.0",
@@ -16,14 +24,6 @@
     "tslib": "^2.3.0",
     "zone.js": "^0.13.0",
     "uuid": "8.3.2"
-  },
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^16.0.0",
