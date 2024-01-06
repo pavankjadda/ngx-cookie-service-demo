@@ -1,6 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
-import { v4 as uuidv4 } from 'uuid';
 import { Router } from '@angular/router';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
@@ -16,7 +15,7 @@ export class AppComponent implements OnInit {
 	cookieInput = new FormControl('');
 
 	ngOnInit(): void {
-		this.cookieService.set('X-Auth-Token', uuidv4());
+		this.cookieService.set('X-Auth-Token', '');
 	}
 
 	setCookie() {
