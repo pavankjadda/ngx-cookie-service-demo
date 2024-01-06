@@ -8,7 +8,7 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
 	selector: 'app-root',
 	standalone: true,
 	templateUrl: './app.component.html',
-	imports: [ ReactiveFormsModule],
+	imports: [ReactiveFormsModule],
 })
 export class AppComponent implements OnInit {
 	cookieService = inject(CookieService);
