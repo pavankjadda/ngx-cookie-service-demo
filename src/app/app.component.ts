@@ -3,13 +3,12 @@ import { CookieService } from 'ngx-cookie-service';
 import { v4 as uuidv4 } from 'uuid';
 import { Router } from '@angular/router';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
-import { NgIf } from '@angular/common';
 
 @Component({
 	selector: 'app-root',
 	standalone: true,
 	templateUrl: './app.component.html',
-	imports: [NgIf, ReactiveFormsModule],
+	imports: [ ReactiveFormsModule],
 })
 export class AppComponent implements OnInit {
 	cookieService = inject(CookieService);
