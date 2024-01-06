@@ -1,11 +1,9 @@
 <div style="margin:10px">
 	<h2>NGX Cookie Service Demo</h2>
-	<h3>
-		<h3>
-			@if (!router.url.includes('https://stackblitz.com/~/github.com/pavankjadda/ngx-cookie-service-demo?view=editor')) {
-				<a href="https://ngxcookieservicedemo-qa0s--4200--a2aabdd9.local-credentialless.webcontainer.io/" target="_blank">Click here to set/get cookies</a>
-			}
-		</h3>
+	<h3 style="color: red">
+		@if (!router.url.includes('https://stackblitz.com/~/github.com/pavankjadda/ngx-cookie-service-demo?view=editor')) {
+			<b>Note: Click on "Open in New Tab" to get demo working</b>
+		}
 	</h3>
 	<hr />
 	<p>This demo sets/gets cookie <b>X-Auth-Token</b> cookie. Default it sets empty string cookie value but you can set it below</p>
