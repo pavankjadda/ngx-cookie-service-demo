@@ -1,21 +1,19 @@
 <div style="margin:10px">
-	<h2>
-		NGX Cookie Service Demo
-	</h2>
+	<h2>NGX Cookie Service Demo</h2>
 	<h3>
-		@if (!router.url.includes('https://angular-ivy-1lrgdt.stackblitz.io/')) {
-			<a href="https://angular-ivy-1lrgdt.stackblitz.io/" target="_blank">Click here to set/get cookies</a>
-		}
+		<ng-container *ngIf="!router.url.includes('https://angular-ivy-1lrgdt.stackblitz.io/')">
+			<a href="https://angular-ivy-1lrgdt.stackblitz.io/" target="_blank">Click here to set/get cookies</a> </ng-container
+		>>
 	</h3>
-	<hr/>
+	<hr />
 	<p>This demo sets/gets cookie <b>X-Auth-Token</b> cookie. Default it sets random generated cookie value but you can set it below</p>
-	<section >
+	<section>
 		<div>
 			<p><b>Cookie Present</b>: {{ cookieService.check('X-Auth-Token') ? 'Yes' : 'No' }}</p>
 			<p><b>Get Cookie</b>: {{ cookieService.get('X-Auth-Token') }}</p>
 
 			<h3>Set Cookie:</h3>
-			<input [formControl]="cookieInput" type="text" style="margin-inline: 10px"/>
+			<input [formControl]="cookieInput" type="text" style="margin-inline: 10px" />
 			<button (click)="setCookie()">Set X-Auth-Token Cookie</button>
 
 			<h3>Delete Cookie(s):</h3>
@@ -23,5 +21,4 @@
 			<button (click)="cookieService.deleteAll()">Delete All Cookies</button>
 		</div>
 	</section>
-
 </div>
