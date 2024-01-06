@@ -1,10 +1,27 @@
-<p>Successfully set randomly generated cookie <b>X-Auth-Token</b></p>
-<br />
+<div style="margin:10px">
+	<h2>
+		NGX Cookie Service Demo
+	</h2>
+	<h3>
+		@if (!router.url.includes('https://angular-ivy-1lrgdt.stackblitz.io/')) {
+			<a href="https://angular-ivy-1lrgdt.stackblitz.io/" target="_blank">Click here to set/get cookies</a>
+		}
+	</h3>
+	<hr/>
+	<p>This demo sets/gets cookie <b>X-Auth-Token</b> cookie. Default it sets random generated cookie value but you can set it below</p>
+	<section >
+		<div>
+			<p><b>Cookie Present</b>: {{ cookieService.check('X-Auth-Token') ? 'Yes' : 'No' }}</p>
+			<p><b>Get Cookie</b>: {{ cookieService.get('X-Auth-Token') }}</p>
 
-<h2>
-  <a href="https://angular-ivy-1lrgdt.stackblitz.io/" target="_blank"
-    >Click here to see the Cookie</a
-  >
-</h2>
-<p>Cookie Present: {{ cookieService.check('X-Auth-Token') ? 'Yes' : 'No' }}</p>
-<p>Get Cookie: {{ cookieValue }}</p>
+			<h3>Set Cookie:</h3>
+			<input [formControl]="cookieInput" type="text" style="margin-inline: 10px"/>
+			<button (click)="setCookie()">Set X-Auth-Token Cookie</button>
+
+			<h3>Delete Cookie(s):</h3>
+			<button (click)="cookieService.delete('X-Auth-Token')" style="margin-inline: 10px">Delete X-Auth-Token Cookie</button>
+			<button (click)="cookieService.deleteAll()">Delete All Cookies</button>
+		</div>
+	</section>
+
+</div>
