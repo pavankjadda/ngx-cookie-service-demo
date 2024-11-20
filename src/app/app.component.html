@@ -4,18 +4,18 @@
 		<b>Note: Click on "Open in New Tab" to get demo working</b>
 	</h3>
 	<hr />
-	<p>This demo sets/gets cookie <b>X-Auth-Token</b> cookie. Default it sets empty string cookie value but you can set it below</p>
+	<p>This demo sets/gets cookie <b>token</b> cookie. Default it sets empty string cookie value but you can set it below</p>
 	<section>
 		<div>
-			<p><b>Cookie Present</b>: {{ cookieService.check('X-Auth-Token') ? 'Yes' : 'No' }}</p>
-			<p><b>Get Cookie</b>: {{ cookieService.get('X-Auth-Token') }}</p>
+			<p><b>Cookie Present</b>: {{ cookieService.check('token') ? 'Yes' : 'No' }}</p>
+			<p><b>Get Cookie</b>: {{ cookieService.get('token') }}</p>
 
 			<h3>Set Cookie:</h3>
 			<input [formControl]="cookieInput" type="text" style="margin-inline: 10px" />
-			<button (click)="setCookie()">Set X-Auth-Token Cookie</button>
+			<button (click)="setCookie()">Set token Cookie</button>
 
 			<h3>Delete Cookie(s):</h3>
-			<button (click)="cookieService.delete('X-Auth-Token')" style="margin-inline: 10px">Delete X-Auth-Token Cookie</button>
+			<button (click)="cookieService.delete('token')" style="margin-inline: 10px">Delete token Cookie</button>
 			<button (click)="cookieService.deleteAll()">Delete All Cookies</button>
 		</div>
 	</section>

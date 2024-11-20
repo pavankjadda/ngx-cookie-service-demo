@@ -4,21 +4,19 @@ import { Router } from '@angular/router';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
-	selector: 'app-root',
-	standalone: true,
-	templateUrl: './app.component.html',
-	imports: [ReactiveFormsModule],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    imports: [ReactiveFormsModule]
 })
 export class AppComponent implements OnInit {
 	cookieService = inject(CookieService);
-	router = inject(Router);
 	cookieInput = new FormControl('');
 
 	ngOnInit(): void {
-		this.cookieService.set('X-Auth-Token', '');
+		this.cookieService.set('token', '');
 	}
 
 	setCookie() {
-		this.cookieService.set('X-Auth-Token', this.cookieInput.value ?? '');
+		this.cookieService.set('token', this.cookieInput.value ?? '');
 	}
 }
