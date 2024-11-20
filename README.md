@@ -1,6 +1,6 @@
 # Ngx Cookie Service Demo
 
-A simple Angular application that demonstrates the use of the `ngx-cookie-service` library.
+A simple Angular application that demonstrates the use of the [ngx-cookie-service](https://github.com/stevermeister/ngx-cookie-service) library.
 
 ## Development server
 
