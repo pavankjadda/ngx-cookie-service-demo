@@ -3,7 +3,7 @@
   "version": "19.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --hmr",
+    "start": "NG_HMR_TEMPLATES=1 ng serve --hmr",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
