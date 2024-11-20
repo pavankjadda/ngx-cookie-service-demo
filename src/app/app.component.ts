@@ -13,10 +13,10 @@ export class AppComponent implements OnInit {
 	cookieInput = new FormControl('');
 
 	ngOnInit(): void {
-		this.cookieService.set('token', '');
+		this.cookieService.set('X-Auth-Token', '');
 	}
 
 	setCookie() {
-		this.cookieService.set('token', this.cookieInput.value ?? '');
+		this.cookieService.set('X-Auth-Token', this.cookieInput.value ?? '');
 	}
 }
